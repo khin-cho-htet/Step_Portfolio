@@ -1,0 +1,9 @@
+{
+  "name": "steph-lifestyle-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editorial portfolio site for Steph, a Thailand-based lifestyle content creator.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
