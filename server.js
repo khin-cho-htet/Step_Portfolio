@@ -4,6 +4,7 @@ const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, "public");
+const PHOTO_DIR = path.join(__dirname, "photo");
 
 const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
@@ -36,11 +37,14 @@ function sendFile(filePath, response) {
 }
 
 const server = http.createServer((request, response) => {
-  const requestPath = request.url === "/" ? "/index.html" : request.url;
-  const safePath = path.normalize(requestPath).replace(/^(\.\.[/\\])+/, "");
-  const filePath = path.join(PUBLIC_DIR, safePath);
+  const requestPath = request.url === "/" ? "/index.html" : request.url.split("?")[0];
+  const photoRequest = requestPath.startsWith("/photo/");
+  const rootDirectory = photoRequest ? PHOTO_DIR : PUBLIC_DIR;
+  const relativePath = photoRequest ? requestPath.slice("/photo/".length) : requestPath;
+  const safePath = path.normalize(relativePath).replace(/^(\.\.[/\\])+/, "");
+  const filePath = path.join(rootDirectory, safePath);
 
-  if (!filePath.startsWith(PUBLIC_DIR)) {
+  if (!filePath.startsWith(rootDirectory)) {
     response.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Forbidden");
     return;
