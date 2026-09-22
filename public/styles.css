@@ -25,3 +25,26 @@
 @keyframes ring-in{to{opacity:1}}
 
 .format{cursor:pointer}.format:after{content:"Open �";position:absolute;top:1.35rem;right:1.2rem;z-index:2;opacity:0;font:700 .58rem var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:opacity .25s}.format:hover:after,.format:focus-visible:after{opacity:1}.format:focus-visible{outline:3px solid var(--ink);outline-offset:-.45rem}
+
+/* Mobile-first tuning: touch-friendly rails, stable image space, and no horizontal page overflow. */
+@media(max-width:800px){
+  body{overflow-x:clip}
+  .hero{min-height:42rem}
+  .hero-portrait{inset:8.5rem -13% 0}
+  .hero-portrait img{width:112%;height:61%;bottom:8%}
+  .hero-copy{bottom:8.6rem;width:70%}
+  .hero h1{font-size:clamp(2.55rem,11vw,3.5rem)}
+  .hero-foot{gap:.8rem}
+  .hero-foot p{max-width:13.5rem}
+  .formats-intro h2{font-size:clamp(3rem,14vw,4.8rem)}
+  .format-rail{width:100%;max-width:100%;overflow-x:auto;overflow-y:visible;padding:0 1.25rem 1.2rem;scroll-snap-type:x mandatory;scroll-padding-inline:1.25rem;scrollbar-width:thin}
+  .format{flex:0 0 min(78vw,19rem);width:min(78vw,19rem);scroll-snap-align:start}
+  .format:last-child{margin-right:1.25rem}
+  .signal-grid{overflow:hidden}
+  .diary-grid{gap:.8rem}
+  .diary-grid img{min-width:0}
+  .brand-cloud{gap:.55rem}
+  .rate-experience{padding:.75rem}
+  .addon-chip{min-height:3rem}
+  .addon-chip strong{align-items:flex-end;flex-direction:column;gap:.12rem}
+}
