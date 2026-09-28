@@ -262,3 +262,149 @@
 /* LINE and WhatsApp become expressive message cards rather than plain outlined buttons. */
 .collab-actions{position:relative;gap:.9rem;padding:.45rem .15rem}.collab-actions:before{content:"";position:absolute;left:50%;top:50%;width:7rem;height:7rem;border:1px dashed rgba(255,241,181,.35);border-radius:50%;transform:translate(-50%,-50%);animation:contact-orbit 13s linear infinite}.collab-action{position:relative;z-index:1;min-height:8.4rem;padding:1.1rem 1.15rem;overflow:hidden;border:0!important;border-radius:1.35rem;color:#260812!important;box-shadow:.55rem .65rem 0 rgba(26,3,10,.32);isolation:isolate}.collab-action:before{position:absolute;z-index:-1;right:-.75rem;bottom:-1.05rem;display:grid;place-items:center;width:4.6rem;height:4.6rem;border-radius:50%;font:800 .64rem var(--mono);letter-spacing:-.05em;transform:rotate(-12deg)}.collab-action:after{content:"";position:absolute;z-index:-2;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.48),transparent 55%)}.line-action{background:linear-gradient(145deg,#dff5aa,#b7e855);transform:rotate(-2.2deg)}.line-action:before{content:"LINE";background:#05b53f;color:#fff}.whatsapp-action{margin-top:.65rem;background:linear-gradient(145deg,#bce8e3,#7ec8b9);transform:rotate(2.2deg)}.whatsapp-action:before{content:"WA";background:#20aa73;color:#fff;font-size:.86rem}.collab-action span{max-width:5.5rem;color:#2d1716;font:800 1.12rem/1 var(--sans);letter-spacing:-.065em}.collab-action b{align-items:center;color:#52212a;font:700 .53rem var(--mono);letter-spacing:.075em}.collab-action i{display:grid;place-items:center;width:1.55rem;height:1.55rem;border:1px solid currentColor;border-radius:50%;font-size:.72rem}.collab-action:hover{color:#260812!important;transform:translateY(-.55rem) rotate(0deg)!important;box-shadow:.75rem .9rem 0 rgba(26,3,10,.35)}@keyframes contact-orbit{to{transform:translate(-50%,-50%) rotate(360deg)}}
 @media(max-width:800px){.collab-actions{gap:.7rem}.collab-actions:before{width:5.4rem;height:5.4rem}.collab-action{min-height:7rem;padding:.9rem;border-radius:1.1rem}.collab-action:before{width:3.7rem;height:3.7rem;right:-.65rem;bottom:-.8rem;font-size:.53rem}.collab-action span{font-size:.92rem}.collab-action b{font-size:.46rem}.whatsapp-action{margin-top:.45rem}}
+
+/* Refined My Niche: stacked pills, a larger portrait, and the requested ice-sky / cream editorial palette. */
+.niche-section{background:radial-gradient(circle at 50% 34%,rgba(193,222,232,.16),transparent 20%),linear-gradient(125deg,#150408,#500e20 53%,#240812)}
+.niche-frame{grid-template-columns:minmax(12rem,.62fr) minmax(18rem,1fr) minmax(19rem,1.2fr);min-height:42rem;padding:2.5rem 2.25rem 1.8rem;align-items:end}.niche-menu{align-self:center}.niche-menu .kicker{color:#c1dee8}.niche-menu ul{max-width:14.5rem;gap:.72rem}.niche-menu li{min-height:3.45rem;padding:.74rem 1.05rem;border-color:rgba(193,222,232,.62);background:rgba(255,241,181,.1);color:#fff1b5;letter-spacing:.065em}.niche-menu li:nth-child(2),.niche-menu li:nth-child(4){margin-left:0}.niche-menu li:hover{background:#c1dee8;color:#591427;transform:translateX(.4rem)}
+.niche-portrait{min-height:39rem;height:100%;justify-content:center}.niche-portrait img{width:142%;max-height:44rem}.niche-portrait:before{width:96%;background:radial-gradient(circle,rgba(193,222,232,.35),transparent 68%)}
+.niche-copy{align-self:center;padding:1rem 0 2.7rem}.niche-copy h2{color:#c1dee8}.niche-copy h2 em{color:#fff1b5}.niche-copy h3{color:#c1dee8}.niche-copy>p:not(.niche-eyebrow){max-width:33rem;color:#fff8df;font-size:clamp(1.12rem,1.4vw,1.32rem);line-height:1.68;letter-spacing:.02em}.niche-stamp{right:-1.2rem;bottom:-1.05rem;width:8.8rem;border:2px solid rgba(193,222,232,.82);color:#fff1b5;font-size:.76rem;letter-spacing:.11em;line-height:1.45;box-shadow:0 .55rem 1.5rem rgba(12,1,5,.22)}
+@media(max-width:800px){.niche-frame{padding:3rem 1.5rem 2rem}.niche-menu ul{grid-template-columns:1fr;max-width:100%}.niche-menu li{min-height:3.35rem}.niche-portrait{min-height:30rem;height:30rem}.niche-portrait img{width:116%;height:auto;max-height:none}.niche-copy>p:not(.niche-eyebrow){font-size:1.05rem}.niche-stamp{right:-.25rem;bottom:-.5rem;width:7rem;font-size:.64rem}}
+
+/* The niche list follows a soft curve, and the stamp sits clear of the description. */
+@media(min-width:801px){.niche-menu li:nth-child(1){transform:translateX(1.35rem)}.niche-menu li:nth-child(2){transform:translateX(.7rem)}.niche-menu li:nth-child(3){transform:translateX(0)}.niche-menu li:nth-child(4){transform:translateX(.7rem)}.niche-menu li:nth-child(5){transform:translateX(1.35rem)}.niche-menu li:hover{transform:translateX(1.1rem)}.niche-stamp{right:-4.6rem;bottom:0}.niche-copy>p:not(.niche-eyebrow){max-width:25rem}}
+@media(max-width:800px){.niche-copy{padding-bottom:7rem}.niche-stamp{right:0;bottom:1rem}}
+
+/* Give the niche label its own upper anchor and let the curved pills breathe. */
+@media(min-width:801px){.niche-menu{align-self:stretch;padding-top:.35rem}.niche-menu .kicker{margin:0}.niche-menu ul{margin-top:4.5rem;gap:1.3rem}}
+@media(max-width:800px){.niche-menu ul{gap:.8rem}}
+
+
+/* Center the niche labels while the curve opens toward Steph's portrait and hand. */
+@media(min-width:801px){
+  .niche-menu li{position:relative;justify-content:center;padding-inline:2.5rem;text-align:center}
+  .niche-menu li span{position:absolute;left:1.05rem}
+  .niche-menu li:nth-child(1){transform:translateX(.15rem)}
+  .niche-menu li:nth-child(2){transform:translateX(.95rem)}
+  .niche-menu li:nth-child(3){transform:translateX(2.05rem)}
+  .niche-menu li:nth-child(4){transform:translateX(.95rem)}
+  .niche-menu li:nth-child(5){transform:translateX(.15rem)}
+  .niche-menu li:nth-child(1):hover{transform:translate(.15rem,-.14rem)}
+  .niche-menu li:nth-child(2):hover{transform:translate(.95rem,-.14rem)}
+  .niche-menu li:nth-child(3):hover{transform:translate(2.05rem,-.14rem)}
+  .niche-menu li:nth-child(4):hover{transform:translate(.95rem,-.14rem)}
+  .niche-menu li:nth-child(5):hover{transform:translate(.15rem,-.14rem)}
+}
+
+
+/* Keep the Beauty pill at the outer tip, but bring the full niche arc toward the portrait. */
+@media(min-width:801px){
+  .niche-menu ul{margin-left:2.7rem}
+  .niche-menu li{height:4.65rem;min-height:4.65rem;line-height:1.08}
+}
+
+/* Match every editorial section title to the Hero STEPH display treatment. */
+main > section h2{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;
+  font-weight:900;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+main > section h2 em{font-style:normal}
+@media(max-width:800px){
+  main > section h2{letter-spacing:-.04em}
+}
+
+
+/* Open the list outwards: Beauty reaches the outer edge, while the ends return inward. */
+@media(min-width:801px){
+  .niche-menu ul{position:relative;top:1.8rem}
+  .niche-menu li:nth-child(1){transform:translateX(2.05rem)}
+  .niche-menu li:nth-child(2){transform:translateX(.95rem)}
+  .niche-menu li:nth-child(3){transform:translateX(.15rem)}
+  .niche-menu li:nth-child(4){transform:translateX(.95rem)}
+  .niche-menu li:nth-child(5){transform:translateX(2.05rem)}
+  .niche-menu li:nth-child(1):hover{transform:translate(2.05rem,-.14rem)}
+  .niche-menu li:nth-child(2):hover{transform:translate(.95rem,-.14rem)}
+  .niche-menu li:nth-child(3):hover{transform:translate(.15rem,-.14rem)}
+  .niche-menu li:nth-child(4):hover{transform:translate(.95rem,-.14rem)}
+  .niche-menu li:nth-child(5):hover{transform:translate(2.05rem,-.14rem)}
+}
+
+/* Wider display tracking keeps all section titles crisp rather than overlapping. */
+main > section h2{
+  letter-spacing:.035em;
+  line-height:.88;
+}
+@media(max-width:800px){
+  main > section h2{letter-spacing:.02em;line-height:.92}
+}
+
+/* Shift the complete niche pill arc left without changing its curve. */
+@media(min-width:801px){.niche-menu ul{margin-left:.4rem}}
+
+
+/* Carry the Hero STEPH display voice through the partnership callout and direct email. */
+.collab-cta h3,
+.email{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;
+  font-weight:900;
+  font-style:normal;
+  letter-spacing:.025em;
+  line-height:.92;
+  text-transform:uppercase;
+}
+.collab-cta h3 em{font-style:normal}
+.email{font-size:clamp(1.7rem,3vw,3rem);letter-spacing:.018em}
+@media(max-width:800px){
+  .collab-cta h3{letter-spacing:.018em}
+  .email{font-size:clamp(1.35rem,7.1vw,2.2rem);letter-spacing:.012em}
+}
+
+/* Section two now uses the Hero STEPH display face in a single ice-blue tone. */
+.who-copy h2,.who-copy h2 em{font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;font-style:normal;font-weight:900;color:#c1dee8;-webkit-text-stroke:0;text-stroke:0;letter-spacing:.035em;line-height:.88}
+@media(max-width:800px){.who-copy h2,.who-copy h2 em{letter-spacing:.02em;line-height:.92}}
+
+
+/* Section five turns each content format into an image-led editorial card. */
+.format{isolation:isolate}
+.format-image{position:absolute!important;z-index:0!important;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.82;filter:saturate(.92) contrast(1.05);transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .7s}
+.format:after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,rgba(12,3,7,.08),rgba(12,3,7,.2) 40%,rgba(12,3,7,.88));pointer-events:none}
+.format > :not(.format-image){position:relative;z-index:2}
+.format:hover .format-image{transform:scale(1.07);filter:saturate(1.08) contrast(1.08)}
+.format.cream:after{background:linear-gradient(180deg,rgba(16,6,8,.08),rgba(16,6,8,.25) 40%,rgba(16,6,8,.83))}
+.format.cream,.format.rose,.format.red,.format.black,.format.pink{color:#fffaf0}
+.format.cream{color:#fffaf0}
+
+/* Center the content overlay within each What She Makes card. */
+.format{align-items:center;text-align:center}.format p{margin-inline:auto}
+
+/* Keep format card copy centered, with the sequence number anchored left. */
+.format > span{align-self:flex-start;text-align:left}
+
+
+/* Mobile format cards stack cleanly instead of requiring a horizontal rail scroll. */
+@media(max-width:800px){
+  .formats{overflow:clip}
+  .formats-intro{width:calc(100% - 2.5rem)}
+  .format-rail{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    width:100%;
+    max-width:100%;
+    gap:1rem;
+    padding:0 1.25rem;
+    overflow:visible;
+    scroll-snap-type:none;
+  }
+  .format{
+    width:100%;
+    min-height:0;
+    height:clamp(18.5rem,76vw,24rem);
+    flex:none;
+    scroll-snap-align:none;
+  }
+  .format h3{font-size:clamp(2.35rem,12vw,4rem)}
+  .format-image{opacity:.9}
+  main > section{min-width:0}
+  main > section h2{max-width:100%;overflow-wrap:anywhere}
+}
