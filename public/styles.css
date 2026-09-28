@@ -919,3 +919,349 @@ main > section h2{
     white-space:normal;
   }
 }
+
+/* Section 05 joins the site's deep wine gradient rhythm. */
+.formats{
+  background:
+    radial-gradient(circle at 84% 18%,rgba(211,46,72,.34),transparent 28%),
+    radial-gradient(circle at 14% 82%,rgba(193,222,232,.12),transparent 30%),
+    linear-gradient(125deg,#180509,#4d0f1d 57%,#21060c);
+  color:#fff1b5;
+}
+.formats .kicker{color:#c1dee8}
+.formats-intro>p{color:#f8dedd}
+.formats h2{color:#fff1b5}
+.formats h2 em{color:#f58bb1}
+
+
+/* Blue and cream type system: imagery and supplied brand-logo artwork retain their own colors. */
+:root{
+  --pink:#c1dee8;
+  --blush:#fff1b5;
+}
+
+/* Section 05 has a deliberate two-line editorial lockup on wide screens. */
+.formats h2{
+  max-width:none;
+  color:#c1dee8;
+  font-size:clamp(3.25rem,5.1vw,6rem);
+  line-height:.84;
+  letter-spacing:.025em;
+  white-space:nowrap;
+}
+.formats h2 em{color:#fff1b5}
+.formats-intro>p{color:#fff1b5}
+
+main > section h2{color:#c1dee8}
+main > section h2 em{color:#fff1b5!important}
+.hero h1,.hero h1 em{color:#fff1b5}
+.kicker,.section-label,.overline,.niche-eyebrow,.kit-edition,.kit-scroll,
+.who-photo-label,.brand-portrait-panel figcaption span,
+.header-contact,.brand span{color:#c1dee8!important}
+.who-intro,.who-focus strong,.niche-copy>p:not(.niche-eyebrow),
+.side p,.rate-head>p,.collab-cta>div>p:last-child,
+.rate-note,.email,.socials{color:#fff1b5}
+.who-signal span,.who-focus p,.niche-copy h3,.niche-stamp,
+.brand-portrait-panel figcaption{color:#c1dee8}
+.collab-cta h3 em{color:#c1dee8!important}
+
+/* The collaboration panel is intentionally light, so it keeps a readable dark-blue type treatment. */
+.brands-gallery .brands-head h2{color:#173a52}
+.brands-gallery .brands-head h2 em{color:#356f93!important}
+.brands-gallery .brands-head>p:last-child{color:#173a52}
+
+@media(max-width:800px){
+  .formats h2{
+    font-size:clamp(2.45rem,10.5vw,3.3rem);
+    line-height:.88;
+    white-space:normal;
+  }
+}
+
+
+/* Section 08 portrait intentionally breaks the content container and meets the viewport's left edge. */
+@media(min-width:801px){
+  .contact-portrait{
+    left:calc((min(90vw, 1300px) - 100vw) / 2);
+    width:min(40vw,30rem);
+    top:auto;
+    bottom:0;
+  }
+}
+
+
+/* Section 06 returns to a circular collaboration constellation on one red-gradient field. */
+.brand-showcase{
+  width:100%;
+  max-width:none;
+  grid-template-columns:minmax(20rem,.78fr) minmax(34rem,1.22fr);
+  border:0;
+  box-shadow:none;
+  background:
+    radial-gradient(circle at 84% 14%,rgba(193,222,232,.18),transparent 24%),
+    radial-gradient(circle at 20% 86%,rgba(211,46,72,.25),transparent 32%),
+    linear-gradient(135deg,#1a050a,#67152d 58%,#28070e);
+}
+.brands-gallery{
+  color:#fff1b5;
+  background:transparent!important;
+}
+.brands-gallery .brands-head .kicker{color:#c1dee8!important}
+.brands-gallery .brands-head h2{color:#c1dee8!important}
+.brands-gallery .brands-head h2 em{color:#fff1b5!important}
+.brands-gallery .brands-head>p:last-child{color:#fff1b5!important}
+
+@media(min-width:801px){
+  .brand-showcase .brand-mosaic{
+    position:relative!important;
+    display:block!important;
+    width:min(100%,42rem)!important;
+    min-height:34rem;
+    margin-inline:auto;
+  }
+  .brand-showcase .brand-tile,
+  .brand-showcase .brand-tile--feature,
+  .brand-showcase .brand-tile--wide{
+    position:absolute!important;
+    width:clamp(4rem,6.2vw,6.6rem)!important;
+    aspect-ratio:1;
+    min-height:0!important;
+    margin:0!important;
+    padding:.4rem!important;
+    overflow:hidden;
+    border:1px solid rgba(193,222,232,.78)!important;
+    border-radius:50%!important;
+    background-color:#fff1b5!important;
+    background-size:80% auto!important;
+    background-origin:padding-box!important;
+    background-clip:padding-box!important;
+    box-shadow:0 .65rem 1.2rem rgba(8,1,4,.3)!important;
+  }
+  .brand-showcase .brand-tile:nth-child(1),
+  .brand-showcase .brand-tile:nth-child(4),
+  .brand-showcase .brand-tile:nth-child(6){
+    width:clamp(5.1rem,7.6vw,8rem)!important;
+  }
+  .brand-showcase .brand-tile:hover{
+    transform:translateY(-.4rem) scale(1.06) rotate(-3deg)!important;
+  }
+}
+@media(max-width:800px){
+  .brand-showcase{
+    width:100%;
+    max-width:none;
+    background:
+      radial-gradient(circle at 84% 11%,rgba(193,222,232,.17),transparent 25%),
+      linear-gradient(145deg,#1a050a,#67152d);
+  }
+  .brands-gallery{padding:2rem 1.25rem!important}
+  .brand-showcase .brand-mosaic{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-auto-rows:clamp(5.7rem,27vw,6.8rem);
+    gap:.55rem;
+    justify-items:center;
+  }
+  .brand-showcase .brand-tile,
+  .brand-showcase .brand-tile--feature,
+  .brand-showcase .brand-tile--wide{
+    position:static!important;
+    width:clamp(4.25rem,22vw,5.65rem)!important;
+    aspect-ratio:1;
+    min-height:0!important;
+    margin:0!important;
+    padding:.35rem!important;
+    border:1px solid rgba(193,222,232,.75)!important;
+    border-radius:50%!important;
+    background-color:#fff1b5!important;
+    background-size:80% auto!important;
+    box-shadow:0 .45rem .9rem rgba(8,1,4,.28)!important;
+  }
+}
+
+
+/* A clear editorial label connects the portrait to the deliverables below. */
+.rate-included-label{
+  position:absolute;
+  z-index:2;
+  top:clamp(1.25rem,2.4vw,2.15rem);
+  left:clamp(1.25rem,2.4vw,2.15rem);
+  margin:0;
+  padding:.6rem .82rem;
+  border:1px solid rgba(193,222,232,.76);
+  background:rgba(26,5,10,.5);
+  color:#c1dee8;
+  font:700 clamp(.62rem,.82vw,.76rem)/1 var(--mono);
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  backdrop-filter:blur(7px);
+}
+@media(max-width:800px){
+  .rate-included-label{
+    top:1rem;
+    left:1rem;
+    font-size:.59rem;
+  }
+}
+
+
+/* Keep every logo badge square: legacy grid stretching must not flatten the circular collage. */
+@media(min-width:801px){
+  .brand-showcase .brand-mosaic{
+    height:34rem!important;
+    min-height:34rem!important;
+    flex:none!important;
+  }
+  .brand-showcase .brand-tile,
+  .brand-showcase .brand-tile--feature,
+  .brand-showcase .brand-tile--wide{
+    width:clamp(4rem,6.2vw,6.6rem)!important;
+    height:clamp(4rem,6.2vw,6.6rem)!important;
+    aspect-ratio:auto!important;
+    align-self:auto!important;
+    justify-self:auto!important;
+  }
+  .brand-showcase .brand-tile:nth-child(1),
+  .brand-showcase .brand-tile:nth-child(4),
+  .brand-showcase .brand-tile:nth-child(6){
+    width:clamp(5.1rem,7.6vw,8rem)!important;
+    height:clamp(5.1rem,7.6vw,8rem)!important;
+  }
+  .brand-showcase .brand-tile:nth-child(1){left:5%!important;top:6%!important}
+  .brand-showcase .brand-tile:nth-child(2){left:30%!important;top:12%!important}
+  .brand-showcase .brand-tile:nth-child(3){left:52%!important;top:3%!important}
+  .brand-showcase .brand-tile:nth-child(4){left:72%!important;top:18%!important}
+  .brand-showcase .brand-tile:nth-child(5){left:13%!important;top:40%!important}
+  .brand-showcase .brand-tile:nth-child(6){left:36%!important;top:42%!important}
+  .brand-showcase .brand-tile:nth-child(7){left:60%!important;top:48%!important}
+  .brand-showcase .brand-tile:nth-child(8){left:2%!important;top:68%!important}
+  .brand-showcase .brand-tile:nth-child(9){left:27%!important;top:70%!important}
+  .brand-showcase .brand-tile:nth-child(10){left:54%!important;top:70%!important}
+  .brand-showcase .brand-tile:nth-child(11){left:84%!important;top:4%!important}
+  .brand-showcase .brand-tile:nth-child(12){left:16%!important;top:23%!important}
+  .brand-showcase .brand-tile:nth-child(13){left:42%!important;top:25%!important}
+  .brand-showcase .brand-tile:nth-child(14){left:61%!important;top:30%!important}
+  .brand-showcase .brand-tile:nth-child(15){left:84%!important;top:43%!important}
+  .brand-showcase .brand-tile:nth-child(16){left:20%!important;top:55%!important}
+  .brand-showcase .brand-tile:nth-child(17){left:43%!important;top:59%!important}
+  .brand-showcase .brand-tile:nth-child(18){left:69%!important;top:61%!important}
+  .brand-showcase .brand-tile:nth-child(19){left:83%!important;top:72%!important}
+}
+
+
+/* Brand badges use their own colour fields, not a shared cream fill. */
+.brand-showcase .brand-tile,
+.brand-showcase .brand-tile--feature,
+.brand-showcase .brand-tile--wide{
+  padding:0!important;
+  background-origin:border-box!important;
+  background-clip:border-box!important;
+}
+.brand-showcase .brand-tile:nth-child(1){background-color:#a6df00!important;background-image:url("/assets/brands/big-c-mark.png")!important;background-size:105% auto!important}
+.brand-showcase .brand-tile:nth-child(2){background-color:#08cbed!important;background-image:url("/assets/brands/aura-bangkok-clinic.png")!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(3){background-color:#f4b6b0!important;background-image:url("/assets/brands/centralworld-mark.png")!important;background-size:86% auto!important}
+.brand-showcase .brand-tile:nth-child(4){background-color:#fff1b5!important;background-image:url("/assets/brands/lolane-mark.png")!important;background-size:100% auto!important}
+.brand-showcase .brand-tile:nth-child(5){background-color:#c1dee8!important;background-image:url("/assets/brands/labx-mark.png")!important;background-size:78% auto!important}
+.brand-showcase .brand-tile:nth-child(6){background-color:#f4b6b0!important;background-image:url("/assets/brands/truemoney-mark.png")!important;background-size:80% auto!important}
+.brand-showcase .brand-tile:nth-child(7){background-color:#fff1b5!important;background-image:url("/assets/brands/issa-compass-mark.png")!important;background-size:78% auto!important}
+.brand-showcase .brand-tile:nth-child(8){background-color:#f4b6b0!important;background-image:url("/assets/brands/partner-c.jpg")!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(9){background-color:#5678ec!important;background-image:url("/assets/brands/partner-pencils.jpg")!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(10){background-color:#fff1b5!important;background-image:url("/assets/brands/partner-violet-mark.png")!important;background-size:88% auto!important}
+.brand-showcase .brand-tile:nth-child(11){background-color:#d47477!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(12){background-color:#fff!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(13){background-color:#f2e5cf!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(14){background-color:#50132d!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(15){background-color:#fff!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(16){background-color:#f8e8e1!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(17){background-color:#fff!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(18){background-color:#899b3d!important;background-size:cover!important}
+.brand-showcase .brand-tile:nth-child(19){background-color:#0f7c89!important;background-size:cover!important}
+
+
+/* Spread the partner constellation across the full gallery field, including its right and lower edges. */
+@media(min-width:801px){
+  .brand-showcase .brand-mosaic{
+    height:42rem!important;
+    min-height:42rem!important;
+  }
+  .brand-showcase .brand-tile:nth-child(1){left:1%!important;top:2%!important}
+  .brand-showcase .brand-tile:nth-child(2){left:27%!important;top:5%!important}
+  .brand-showcase .brand-tile:nth-child(3){left:55%!important;top:0!important}
+  .brand-showcase .brand-tile:nth-child(11){left:81%!important;top:5%!important}
+  .brand-showcase .brand-tile:nth-child(12){left:12%!important;top:21%!important}
+  .brand-showcase .brand-tile:nth-child(4){left:38%!important;top:18%!important}
+  .brand-showcase .brand-tile:nth-child(13){left:63%!important;top:20%!important}
+  .brand-showcase .brand-tile:nth-child(15){left:81%!important;top:25%!important}
+  .brand-showcase .brand-tile:nth-child(5){left:1%!important;top:42%!important}
+  .brand-showcase .brand-tile:nth-child(6){left:28%!important;top:39%!important}
+  .brand-showcase .brand-tile:nth-child(14){left:55%!important;top:40%!important}
+  .brand-showcase .brand-tile:nth-child(7){left:78%!important;top:44%!important}
+  .brand-showcase .brand-tile:nth-child(16){left:11%!important;top:62%!important}
+  .brand-showcase .brand-tile:nth-child(8){left:36%!important;top:61%!important}
+  .brand-showcase .brand-tile:nth-child(17){left:62%!important;top:60%!important}
+  .brand-showcase .brand-tile:nth-child(18){left:81%!important;top:65%!important}
+  .brand-showcase .brand-tile:nth-child(9){left:1%!important;top:80%!important}
+  .brand-showcase .brand-tile:nth-child(10){left:28%!important;top:80%!important}
+  .brand-showcase .brand-tile:nth-child(19){left:57%!important;top:79%!important}
+}
+
+
+/* Let the circular constellation occupy the complete right-hand gallery width. */
+@media(min-width:801px){
+  .brand-showcase .brand-mosaic{
+    width:100%!important;
+    max-width:none!important;
+    margin-inline:0!important;
+  }
+}
+
+
+/* Keep the Section 08 portrait full-bleed left, while restoring its upper editorial position. */
+@media(min-width:801px){
+  .contact-portrait{
+    top:clamp(1.4rem,3vw,3.4rem);
+    bottom:auto;
+  }
+}
+
+
+/* Section 08 intentionally uses the full desktop viewport from edge to edge. */
+@media(min-width:801px){
+  .contact{
+    width:100%;
+    max-width:none;
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+  .contact-portrait{
+    left:0;
+    width:min(44vw,38rem);
+  }
+}
+
+
+/* Mobile audit: retain Section 03 impact without consuming the entire viewport. */
+@media(max-width:800px){
+  .signal>div>h2{
+    font-size:clamp(3.7rem,16.5vw,4.5rem);
+    line-height:.9;
+    letter-spacing:.018em;
+  }
+
+  /* Fit the complete brand portrait inside its mobile frame so no head is cropped. */
+  .brand-portrait-panel{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-height:26rem!important;
+    height:26rem!important;
+  }
+  .brand-portrait-panel img{
+    width:auto!important;
+    height:100%!important;
+    max-width:100%!important;
+    max-height:100%!important;
+    object-fit:contain!important;
+    object-position:center top!important;
+  }
+}
