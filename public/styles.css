@@ -408,3 +408,136 @@ main > section h2{
   main > section{min-width:0}
   main > section h2{max-width:100%;overflow-wrap:anywhere}
 }
+
+
+/* A compact mobile My Niche composition: no oversized empty portrait field or long pill column. */
+@media(max-width:800px){
+  .niche-frame{padding:1.4rem 1.25rem 2.5rem}
+  .niche-portrait{
+    min-height:19rem;
+    height:19rem;
+    margin:0 -1.25rem;
+    justify-content:center;
+  }
+  .niche-portrait img{
+    width:104%;
+    height:auto;
+    max-height:23rem;
+    object-position:center bottom;
+  }
+  .niche-portrait figcaption{bottom:.65rem}
+  .niche-menu{margin-top:.75rem}
+  .niche-menu .kicker{margin-bottom:1rem}
+  .niche-menu ul{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.65rem;
+    max-width:none;
+  }
+  .niche-menu li{
+    min-height:4.2rem;
+    padding:.55rem .6rem;
+    font-size:clamp(.9rem,4.25vw,1.08rem);
+  }
+  .niche-menu li:nth-child(5){
+    grid-column:span 2;
+    width:calc(50% - .33rem);
+    justify-self:center;
+  }
+  .niche-copy{padding:2.25rem 0 5.8rem}
+}
+
+
+/* First-screen portrait waits for decode, then enters once on the compositor. */
+.kit-portrait img{
+  animation:none;
+  opacity:0;
+  transform:translate3d(0,1.25rem,0) scale(.985);
+  will-change:opacity,transform;
+}
+.kit-portrait.is-ready img{
+  animation:kit-portrait-in .62s cubic-bezier(.2,.8,.2,1) both;
+}
+@media(prefers-reduced-motion:reduce){
+  .kit-portrait img{opacity:1;transform:none;will-change:auto}
+}
+
+
+/* Section four gets its own mobile layout instead of shrinking the desktop arc. */
+@media(max-width:800px){
+  .niche-frame{padding:1rem 1.25rem 2.75rem}
+  .niche-portrait{
+    height:18rem;
+    min-height:18rem;
+    margin:0 -1.25rem;
+    overflow:hidden;
+    align-items:flex-end;
+  }
+  .niche-portrait img{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:auto;
+    height:100%;
+    max-width:none;
+    max-height:none;
+    object-fit:contain;
+    transform:translateX(-50%);
+    animation:none;
+  }
+  .niche-portrait figcaption{left:50%;bottom:.7rem;transform:translateX(-50%)}
+  .niche-menu{margin-top:1.2rem}
+  .niche-menu .kicker{margin-bottom:.85rem}
+  .niche-menu ul{display:grid;grid-template-columns:1fr;gap:.55rem}
+  .niche-menu li,
+  .niche-menu li:nth-child(5){
+    grid-column:auto;
+    justify-self:stretch;
+    width:100%;
+    min-height:3.7rem;
+    height:3.7rem;
+    padding:.55rem 1rem;
+    border-radius:.75rem;
+    font-size:clamp(1rem,4.4vw,1.14rem);
+  }
+  .niche-menu li span{min-width:1.4rem}
+  .niche-copy{padding:2.6rem 0 5.6rem}
+}
+
+
+/* Force the whole My Niche story to use the full mobile canvas. */
+@media(max-width:800px){
+  .niche-frame{
+    display:block!important;
+    width:100%!important;
+    max-width:none;
+  }
+  .niche-menu,
+  .niche-portrait,
+  .niche-copy{
+    width:100%;
+    max-width:none;
+  }
+  .niche-copy{
+    display:block;
+    padding:2.4rem 1.25rem 6.4rem;
+  }
+  .niche-copy h2{
+    width:100%;
+    max-width:none;
+    font-size:clamp(3.9rem,17vw,5.8rem);
+    line-height:.9;
+    letter-spacing:.02em;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .niche-copy h3{font-size:clamp(1.3rem,6vw,1.8rem)}
+  .niche-copy>p:not(.niche-eyebrow){
+    width:100%;
+    max-width:none;
+    padding-right:0;
+    font-size:1.03rem;
+    line-height:1.62;
+  }
+  .niche-stamp{right:1.25rem;bottom:1.25rem}
+}
